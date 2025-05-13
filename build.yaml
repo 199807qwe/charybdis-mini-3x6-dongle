@@ -24,7 +24,8 @@ include:
     shield: charybdis_dongle
   ###add dongle display
   - board: nice_nano_v2
-    shield: charybdis_dongle dongle_display
+    shield: charybdisnano_central_dongle dongle_display
+    artifact-name: charybdisnano_central_dongle
   ###END
   - board: nice_nano_v2
     shield: charybdis_left
