@@ -79,7 +79,7 @@
             label = "Lower";
             bindings = <
 &kp LA(LEFT_SHIFT)  &trans  &mkp RCLK  &kp UP_ARROW    &mkp LCLK  &mmv MOVE_UP      &kp N7     &kp N8  &kp N9  &kp N0   &kp HOME  &trans
-&trans              &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &mmv MOVE_DOWN    &kp N4     &kp N5  &kp N6  &none    &kp END   &trans
+&kp LS(DEL)         &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &mmv MOVE_DOWN    &kp N4     &kp N5  &kp N6  &none    &kp END   &trans
 &kp ESCAPE          &trans  &kp ENTER  &kp EQUAL       &kp MINUS  &kp PLUS          &kp N1     &kp N2  &kp N3  &kp DOT  &trans    &trans
                                        &kp LGUI        &kp SPACE  &trans            &kp RCTRL  &trans
             >;
