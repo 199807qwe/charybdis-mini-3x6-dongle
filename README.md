@@ -20,6 +20,10 @@ NCS to 101 pin on nice!nano(nrf52840)
 
 Далее переходим к редактированию прошивки. В моес случае это charybdis_3610.dtsi
 Первый скриншот это то что нужно вставить, второй - значение по умолчанию, которое будет у Вас после форка проекта.
+<div style="display: flex;">
+  <img src="https://github.com/user-attachments/assets/1ec94d61-b9ef-44f9-b6b6-0fc178819ca3" alt="alt text for image 1" style="width: 50%;" />
+  <img src="https://github.com/user-attachments/assets/cdeb8cf1-2a88-4d31-82f2-edb8a91e0e5a" alt="alt text for image 2" style="width: 50%;" />
+</div>
 ![image](https://github.com/user-attachments/assets/1ec94d61-b9ef-44f9-b6b6-0fc178819ca3)  ![image](https://github.com/user-attachments/assets/cdeb8cf1-2a88-4d31-82f2-edb8a91e0e5a)
 И добавить блок кода в низ файла
 ![image](https://github.com/user-attachments/assets/3aa5ef65-c1af-4b00-b499-0e05ecebc09e)
