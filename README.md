@@ -21,28 +21,8 @@ Work on the project continues
 | NCS | 101 pin on nice!nano(nrf52840) |
 
 Далее переходим к редактированию прошивки. В моес случае это charybdis_3610.dtsi
-Первый блок кода, это то что нужно вставить.
-```
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
-                <NRF_PSEL(SPIM_MISO, 0, 10)>;
-        };
-    };
 
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
-                <NRF_PSEL(SPIM_MISO, 0, 10)>;
-            low-power-enable;
-        };
-    };
-};
-```
-Второй - значение по умолчанию, которое будет у Вас после форка проекта.
+Первый - значение по умолчанию, которое будет у Вас после форка проекта.
 ```
 &pinctrl {
     spi0_default: spi0_default {
@@ -63,7 +43,27 @@ Work on the project continues
     };
 };
 ```
+Второй блок кода, это то что нужно вставить. Сравните все значения, внесите себе те, которые отличаются от Ваших.
+```
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 0, 10)>;
+        };
+    };
 
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 0, 10)>;
+            low-power-enable;
+        };
+    };
+};
+```
 И добавить блок кода в низ файла
 ```
 / {
