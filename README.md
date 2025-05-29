@@ -20,13 +20,58 @@ NCS to 101 pin on nice!nano(nrf52840)
 
 Далее переходим к редактированию прошивки. В моес случае это charybdis_3610.dtsi
 Первый скриншот это то что нужно вставить, второй - значение по умолчанию, которое будет у Вас после форка проекта.
-<div style="display: flex;">
-  <img src="https://github.com/user-attachments/assets/1ec94d61-b9ef-44f9-b6b6-0fc178819ca3" alt="alt text for image 1" style="width: 50%;" />
-  <img src="https://github.com/user-attachments/assets/cdeb8cf1-2a88-4d31-82f2-edb8a91e0e5a" alt="alt text for image 2" style="width: 50%;" />
-</div>
-#![image](https://github.com/user-attachments/assets/1ec94d61-b9ef-44f9-b6b6-0fc178819ca3)  ![image](https://github.com/user-attachments/assets/cdeb8cf1-2a88-4d31-82f2-edb8a91e0e5a)
+```
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 0, 10)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                <NRF_PSEL(SPIM_MISO, 0, 10)>;
+            low-power-enable;
+        };
+    };
+};
+```
+
+```
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 17)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 17)>;
+            low-power-enable;
+        };
+    };
+};
+```
+
 И добавить блок кода в низ файла
-![image](https://github.com/user-attachments/assets/3aa5ef65-c1af-4b00-b499-0e05ecebc09e)
+```
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+
+  };
+};
+```
 
 Так же в конфигурации требуется добавить поддержку трекбола. Но если у Вас форк проекта с трекболом, то там уже все будет добавлено.
 В файле charybdis_dongle.conf нужно добавить 
@@ -34,7 +79,7 @@ CONFIG_PMW3610=y
 CONFIG_SPI=y
 
 А так же в файл west.yml
-
+```
     - name: badjeff
       url-base: https://github.com/badjeff
 
@@ -47,5 +92,5 @@ CONFIG_SPI=y
     - name: zmk-input-behavior-listener
       remote: badjeff
       revision: main
-
+```
       
