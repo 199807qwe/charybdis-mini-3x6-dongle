@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: carrefinho                            # <--- add this
+      url-base: https://github.com/carrefinho     # <--- and this
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -19,6 +21,9 @@ manifest:
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
+    - name: prospector-zmk-module                 # <--- and these
+      remote: carrefinho                          # <---
+      revision: main                              # <---
     #- name: zmk
       #remote: petejohanson
       #revision: feat/pointers-move-scroll
