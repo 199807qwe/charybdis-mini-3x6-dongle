@@ -66,7 +66,7 @@
         compatible = "zmk,keymap";
 
         Base {
-            label = "Rise";
+            label = "BASE";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E         &kp R      &kp T    &kp Y  &kp U    &kp I      &kp O    &kp P     &kp LEFT_BRACKET
 &kp LCTRL  &kp A  &kp S  &kp D         &kp F      &kp G    &kp H  &kp J    &kp K      &kp L    &kp SEMI  &kp APOS
@@ -76,7 +76,7 @@
         };
 
         Lower {
-            label = "Lower";
+            label = "LOWER";
             bindings = <
 &kp LA(LEFT_SHIFT)  &trans  &mkp RCLK  &kp UP_ARROW    &mkp LCLK  &mmv MOVE_UP      &kp N7     &kp N8  &kp N9  &kp N0   &kp HOME  &trans
 &kp LS(DEL)         &trans  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &mmv MOVE_DOWN    &kp N4     &kp N5  &kp N6  &none    &kp END   &trans
@@ -86,7 +86,7 @@
         };
 
         Raise {
-            label = "Raise";
+            label = "RAISE";
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5     &kp F6          &kp LC(TAB)    &kp LS(LC(TAB))   &kp LS(DEL)        &kp HOME              &kp PAGE_UP    &kp DEL
 &kp F7  &kp F8  &kp F9  &kp F10   &kp F11    &kp F12         &kp LG(LS(S))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp END               &kp PAGE_DOWN  &kp GRAVE
