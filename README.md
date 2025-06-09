@@ -1,10 +1,9 @@
 **Charybdis 3*6 downgle**
 
-![image](https://github.com/user-attachments/assets/0ff7d0b6-d020-493d-9c3a-81cbd71db521)
-
 This repo for charybdis 3*6 with dongle.
 Work on the project continues
-![my_keymap](https://github.com/user-attachments/assets/db53c185-02c7-47e4-a2d5-2270d5ada041)
+
+![56cf454f-f5c7-4c36-aa63-ef28df3399b7](https://github.com/user-attachments/assets/c49da18a-4c8f-4ecf-998b-0d296778741f)
 
 Для работы сенсора 3610 на плате elite-c holder 2.1
 Итак, если вы стали обладателем платы-переходника elite-c holder 2.1 и сенсора 3610, и Вы хотите заставить работать трекбол, эта статья для вас.
