@@ -12,6 +12,11 @@ manifest:
       url-base: https://github.com/carrefinho     # <--- and this
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    #add prospector screen feath
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -37,6 +42,9 @@ manifest:
     - name: zmk-input-behavior-listener
       remote: badjeff
       revision: main
-      
+    #add prospector screen feath
+    - name: zmk-dongle-screen
+      remote: janpfischer
+      revision: main
   self:
     path: config
