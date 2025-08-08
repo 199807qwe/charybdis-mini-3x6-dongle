@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    #- name: zmkfirmware
-    #  url-base: https://github.com/petejohanson
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: englmaxi
@@ -13,10 +11,10 @@ manifest:
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     #add prospector screen feath
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: prospector
+      url-base: https://github.com/t-ogura
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -46,5 +44,10 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
+    #add prospector screen with feath
+    - name: prospector-zmk-module
+      remote: prospector
+      revision: v1.0.0
+      path: modules/prospector-zmk-module
   self:
     path: config
