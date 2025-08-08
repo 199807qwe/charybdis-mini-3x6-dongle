@@ -38,3 +38,7 @@ include:
     #cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000 #optional if logging is enabled
     #snippet: zmk-usb-logging #only enable for debugging
     artifact-name: dongle-screen
+  #new prospector
+  - board: seeeduino_xiao_ble
+    shield: charybdis_dongle prospector_scanner
+    artifact-name: prospector_scanner
