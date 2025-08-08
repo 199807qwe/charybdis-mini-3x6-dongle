@@ -24,9 +24,9 @@ manifest:
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
-    - name: prospector-zmk-module                 # <--- and these
-      remote: carrefinho                          # <---
-      revision: main                              # <---
+ #   - name: prospector-zmk-module                 # <--- and these
+ #     remote: carrefinho                          # <---
+ #     revision: main                              # <---
     #- name: zmk
       #remote: petejohanson
       #revision: feat/pointers-move-scroll
