@@ -40,5 +40,5 @@ include:
     artifact-name: dongle-screen
   #new prospector
   - board: seeeduino_xiao_ble
-    shield: charybdis_dongle prospector_scanner
+    shield: prospector_scanner
     artifact-name: prospector_scanner
