@@ -21,9 +21,9 @@ manifest:
       revision: v0.3
       import: app/west.yml
       #add display viev
-    - name: zmk-dongle-display
-      remote: englmaxi
-      revision: main
+    # - name: zmk-dongle-display
+    #   remote: englmaxi
+    #   revision: main
  #   - name: prospector-zmk-module                 # <--- and these
  #     remote: carrefinho                          # <---
  #     revision: main                              # <---
@@ -33,17 +33,21 @@ manifest:
       #import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: main
+      # revision: main
+      revision: v1.0.0
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
-      revision: main
+      # revision: main
+      revision: v1.0.0
     - name: zmk-input-behavior-listener
       remote: badjeff
-      revision: main
+      # revision: main
+      revision: v1.0.0
     #add prospector screen feath
     - name: zmk-dongle-screen
       remote: janpfischer
-      revision: main
+      # revision: main
+      revision: v1.0.0
     #add prospector screen with feath
     - name: prospector-zmk-module
       remote: prospector
