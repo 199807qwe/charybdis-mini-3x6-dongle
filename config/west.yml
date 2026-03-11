@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    # - name: englmaxi
+    #   url-base: https://github.com/englmaxi
     - name: carrefinho                            # <--- add this
       url-base: https://github.com/carrefinho     # <--- and this
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -18,40 +18,36 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: 4ec69cb
       import: app/west.yml
       #add display viev
     # - name: zmk-dongle-display
     #   remote: englmaxi
     #   revision: main
- #   - name: prospector-zmk-module                 # <--- and these
- #     remote: carrefinho                          # <---
- #     revision: main                              # <---
+   - name: prospector-zmk-module                 # <--- and these
+     remote: carrefinho                          # <---
+     revision: 67425b7                              # <---
     #- name: zmk
       #remote: petejohanson
       #revision: feat/pointers-move-scroll
       #import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
-      # revision: main
-      revision: v1.0.0
+      revision: 77635ba
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
-      # revision: main
-      revision: v1.0.0
+      revision: f49a5ca
     - name: zmk-input-behavior-listener
       remote: badjeff
-      # revision: main
-      revision: v1.0.0
+      revision: 80fc270
     #add prospector screen feath
     - name: zmk-dongle-screen
       remote: janpfischer
-      # revision: main
-      revision: v1.0.0
+      revision: 3311b96
     #add prospector screen with feath
     - name: prospector-zmk-module
       remote: prospector
-      revision: v1.0.0
+      revision: 19ab80f
       path: modules/prospector-zmk-module
   self:
     path: config
